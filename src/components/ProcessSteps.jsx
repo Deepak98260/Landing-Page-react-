@@ -23,7 +23,7 @@ function ProcessSteps() {
   return (
     <section
       ref={ref}
-    className="relative -mt-10 bg-black pb-32"
+   className="relative -mt-10 bg-black pb-16"
     >
      <div className="relative mx-auto flex max-w-[1700px] gap-8 px-16">
 

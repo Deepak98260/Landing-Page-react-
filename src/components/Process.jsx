@@ -1,7 +1,7 @@
 import treeImage from "../assets/images/tree-uAia6REvB137CQyHFCf0za3O6h2zKO.png";
 function Process() {
   return (
-    <section className="bg-black py-40 text-white">
+    <section className="bg-black py-20 text-white">
       <div className="mx-auto flex max-w-[1700px] items-center justify-between px-16">
 
         {/* Left */}

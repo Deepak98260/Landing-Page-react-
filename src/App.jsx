@@ -7,6 +7,9 @@ import Footer from "./components/Footer";
 import Process from "./components/Process";
 import ProcessSteps from "./components/ProcessSteps";
 import Infrastructure from "./components/Infrastructure";
+import GlobalInfrastructure from "./components/GlobalInfrastructure";
+import ServerRegions from "./components/ServerRegions";
+import LiveMetrics from "./components/LiveMetrics";
 
 function App() {
   return (
@@ -19,7 +22,10 @@ function App() {
       <Footer />
       <Process />
       <ProcessSteps />
+      <GlobalInfrastructure />
       <Infrastructure />
+      <ServerRegions />
+      <LiveMetrics />
     </>
   );
 }

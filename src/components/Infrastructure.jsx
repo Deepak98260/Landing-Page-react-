@@ -2,7 +2,7 @@ import NetworkMap from "./NetworkMap";
 
 function Infrastructure() {
   return (
-    <section className="bg-black py-40">
+    <section className="bg-black py-20">
       <div className="mx-auto grid max-w-[1700px] grid-cols-[2.2fr_1.08fr] gap-8 px-16">
 
         {/* LEFT CARD */}
@@ -10,7 +10,7 @@ function Infrastructure() {
 
           <div className="relative z-10 p-14">
 
-            <h2 className="text-[150px] font-light leading-none text-white">
+            <h2 className="text-[130px] font-light leading-none text-white">
               29
             </h2>
 
@@ -35,7 +35,7 @@ function Infrastructure() {
 
           <div className="border border-white/10 bg-[#050505] p-12">
 
-            <h3 className="text-[62px] font-light leading-none text-white">
+            <h3 className="text-[52px] font-light leading-none text-white">
               99.99%
             </h3>
 
@@ -47,7 +47,7 @@ function Infrastructure() {
 
           <div className="border border-white/10 bg-[#050505] p-12">
 
-            <h3 className="text-[62px] font-light leading-none text-white">
+            <h3 className="text-[52px] font-light leading-none text-white">
               &lt;50ms
             </h3>
 
