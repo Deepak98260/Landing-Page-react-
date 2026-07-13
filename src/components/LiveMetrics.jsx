@@ -89,7 +89,7 @@ function LiveMetrics() {
             agent
           </span>
 
-          <span className="block text-[110px] xl:text-[125px] font-light text-[#67615d] leading-none">
+          <span className="block text-[120px] xl:text-[135px] font-light text-[#67615d] leading-none">
             metrics.
           </span>
         </motion.h2>

@@ -1,0 +1,250 @@
+import { motion } from "framer-motion";
+import graphImage from "../assets/images/real-time-graph-INFmn3u0MlUwvNPynoIhwxtPaPjxM5.png";
+import AnimatedCounter from "./AnimatedCounter";
+
+function MetricsDashboard() {
+  return (
+    <section className="relative bg-black py-24">
+
+      {/* Background Dots */}
+
+      <div
+        className="absolute inset-0 opacity-[0.08]"
+        style={{
+          backgroundImage:
+            "radial-gradient(circle,#ffffff 1px,transparent 1px)",
+          backgroundSize: "72px 72px",
+        }}
+      />
+
+      <div className="relative mx-auto max-w-[1700px] px-16">
+
+        {/* ================= GRAPH ================= */}
+
+        <motion.div
+          initial={{
+            opacity: 0,
+            y: 60,
+          }}
+          whileInView={{
+            opacity: 1,
+            y: 0,
+          }}
+          viewport={{ once: true }}
+          transition={{
+            duration: 0.8,
+          }}
+          className="overflow-hidden rounded-[24px] border border-white/10"
+        >
+          <img
+            src={graphImage}
+            alt="Realtime Graph"
+            className="w-full object-cover"
+            draggable={false}
+          />
+        </motion.div>
+
+        {/* ================= METRIC CARDS ================= */}
+
+        <div className="mt-8 grid grid-cols-3 gap-8">
+
+          {/* Card 1 */}
+
+          <motion.div
+            initial={{
+              opacity: 0,
+              y: 40,
+            }}
+            whileInView={{
+              opacity: 1,
+              y: 0,
+            }}
+            viewport={{ once: true }}
+            transition={{
+              duration: 0.6,
+            }}
+            className="border border-white/10 bg-[#060606] p-7"
+          >
+            <p className="font-mono text-sm tracking-[0.25em] uppercase text-gray-500">
+              Tasks completed
+            </p>
+
+            {/* Animated Wave */}
+
+<svg
+  className="mt-10 w-full"
+  viewBox="0 0 420 70"
+  fill="none"
+>
+  <motion.path
+    d="M0 35
+       C40 20 80 20 120 35
+       C160 50 200 50 240 35
+       C280 20 320 20 360 35
+       C390 45 405 40 420 35"
+    stroke="#8f6b8b"
+    strokeWidth="3"
+    strokeLinecap="round"
+    strokeDasharray="1 12"
+    initial={{
+      pathLength: 0,
+    }}
+    whileInView={{
+      pathLength: 1,
+    }}
+    viewport={{ once: true }}
+    transition={{
+      duration: 1.6,
+    }}
+  />
+</svg>
+
+            <h2 className="mt-6 text-[42px] font-light text-white">
+             <AnimatedCounter
+  from={0}
+  to={12847392}
+  duration={2.5}
+/>
+            </h2>
+
+            <p className="mt-8 text-3xl text-white">
+              Tasks completed today
+            </p>
+
+            <p className="mt-5 font-mono text-xl text-gray-500">
+              by 23,847 active agents
+            </p>
+          </motion.div>
+
+          {/* Card 2 */}
+
+          <motion.div
+            initial={{
+              opacity: 0,
+              y: 40,
+            }}
+            whileInView={{
+              opacity: 1,
+              y: 0,
+            }}
+            viewport={{ once: true }}
+            transition={{
+              delay: .15,
+              duration: .6,
+            }}
+            className="border border-white/10 bg-[#060606] p-10"
+          >
+            <p className="font-mono text-sm tracking-[0.25em] uppercase text-gray-500">
+              Across all regions
+            </p>
+
+            <h3 className="mt-8 text-3xl text-white">
+              Availability
+            </h3>
+
+            <svg
+  className="mt-8 w-full"
+  viewBox="0 0 420 60"
+  fill="none"
+>
+  <motion.path
+    d="M0 30
+       C60 45 120 15 180 30
+       C240 45 300 15 360 30
+       C390 40 405 35 420 30"
+    stroke="#b67db4"
+    strokeWidth="3"
+    strokeLinecap="round"
+    strokeDasharray="1 12"
+    initial={{ pathLength: 0 }}
+    whileInView={{ pathLength: 1 }}
+    viewport={{ once: true }}
+    transition={{
+      delay: .2,
+      duration: 1.6,
+    }}
+  />
+</svg>
+
+            <h2 className="mt-32 text-[42px] font-light text-white">
+            <AnimatedCounter
+  from={0}
+  to={99.99}
+  decimals={2}
+  duration={2}
+  suffix="%"
+/>
+            </h2>
+          </motion.div>
+
+          {/* Card 3 */}
+
+          <motion.div
+            initial={{
+              opacity: 0,
+              y: 40,
+            }}
+            whileInView={{
+              opacity: 1,
+              y: 0,
+            }}
+            viewport={{ once: true }}
+            transition={{
+              delay: .3,
+              duration: .6,
+            }}
+            className="border border-white/10 bg-[#060606] p-10"
+          >
+            <p className="font-mono text-sm tracking-[0.25em] uppercase text-gray-500">
+              P99 Latency
+            </p>
+
+            <h3 className="mt-8 text-3xl text-white">
+              Average execution
+            </h3>
+
+            <svg
+  className="mt-8 w-full"
+  viewBox="0 0 420 60"
+  fill="none"
+>
+  <motion.path
+    d="M0 25
+       C70 15 140 40 210 25
+       C280 15 350 40 420 25"
+    stroke="#9b9b9b"
+    strokeWidth="3"
+    strokeLinecap="round"
+    strokeDasharray="1 12"
+    initial={{ pathLength: 0 }}
+    whileInView={{ pathLength: 1 }}
+    viewport={{ once: true }}
+    transition={{
+      delay: .4,
+      duration: 1.6,
+    }}
+  />
+</svg>
+
+            <h2 className="mt-32 text-[42px] font-light text-white">
+             <>
+  &lt;
+  <AnimatedCounter
+    from={0}
+    to={340}
+    duration={2}
+  />
+  ms
+</>
+            </h2>
+          </motion.div>
+
+        </div>
+
+      </div>
+
+    </section>
+  );
+}
+
+export default MetricsDashboard;
