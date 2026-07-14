@@ -64,8 +64,8 @@ const plans = [
 
 function PricingSection() {
   return (
-    <section className="relative overflow-hidden bg-black py-32">
-      <div className="mx-auto max-w-[1700px] px-16">
+    <section className="relative overflow-hidden bg-black py-20 sm:py-24 lg:py-32">
+      <div className="mx-auto max-w-[1700px] px-6 sm:px-10 lg:px-16">
         {/* HERO */}
         <div className="grid grid-cols-1 items-center gap-8 lg:grid-cols-2">
           <motion.div
@@ -81,7 +81,7 @@ function PricingSection() {
               </span>
             </div>
 
-            <h2 className="mt-8 text-[74px] font-light leading-[0.95] sm:text-[80px] lg:text-[96px]">
+            <h2 className="mt-6 sm:mt-7 lg:mt-8 text-[44px] sm:text-[58px] md:text-[74px] lg:text-[96px] font-light leading-[0.95]">
               <span className="text-white">Pay for</span>
               <br />
               <span
@@ -109,14 +109,14 @@ function PricingSection() {
                 repeat: Infinity,
                 ease: "easeInOut",
               }}
-              className="w-full max-w-[520px] object-contain"
+              className="w-full max-w-[300px] sm:max-w-[400px] lg:max-w-[520px] object-contain"
               draggable={false}
             />
           </motion.div>
         </div>
 
         {/* PRICING CARDS */}
-        <div className="mt-32 grid grid-cols-1 gap-8 lg:grid-cols-3">
+        <div className="mt-16 sm:mt-24 lg:mt-32 grid grid-cols-1 gap-6 sm:gap-7 lg:gap-8 lg:grid-cols-3">
           {plans.map((plan, index) => (
             <motion.div
               key={plan.name}
@@ -127,8 +127,8 @@ function PricingSection() {
               whileHover={{ y: -6 }}
               className={`relative flex flex-col ${
                 plan.highlighted
-                  ? "rounded-2xl border border-white/25 bg-white/[0.02] px-10 py-12 lg:-mt-6"
-                  : "border-t border-white/10 px-10 py-12"
+                  ? "rounded-2xl border border-white/25 bg-white/[0.02] px-6 sm:px-8 lg:px-10 py-10 sm:py-11 lg:py-12 lg:-mt-6"
+                  : "border-t border-white/10 px-6 sm:px-8 lg:px-10 py-10 sm:py-11 lg:py-12"
               }`}
             >
               {plan.highlighted && (
@@ -138,14 +138,14 @@ function PricingSection() {
               )}
 
               <p className="font-mono text-xs text-white/30">{plan.number}</p>
-              <h3 className="mt-3 text-3xl font-medium text-white">
+              <h3 className="mt-3 text-2xl sm:text-3xl font-medium text-white">
                 {plan.name}
               </h3>
               <p className="mt-2 text-white/40">{plan.description}</p>
 
-              <div className="mt-8 border-t border-white/10 pt-8">
+              <div className="mt-6 sm:mt-7 lg:mt-8 border-t border-white/10 pt-6 sm:pt-7 lg:pt-8">
                 <div className="flex items-end gap-2">
-                  <span className="text-5xl font-medium text-white">
+                  <span className="text-4xl sm:text-5xl font-medium text-white">
                     {plan.price}
                   </span>
                   {plan.period && (
@@ -159,7 +159,7 @@ function PricingSection() {
                 )}
               </div>
 
-              <ul className="mt-8 flex-1 space-y-4">
+              <ul className="mt-6 sm:mt-7 lg:mt-8 flex-1 space-y-4">
                 {plan.features.map((feature) => (
                   <li key={feature} className="flex items-center gap-3">
                     <Check
@@ -172,7 +172,7 @@ function PricingSection() {
               </ul>
 
               <button
-                className={`mt-10 flex items-center justify-center gap-2 rounded-lg border py-4 font-medium transition-colors ${
+                className={`mt-8 sm:mt-9 lg:mt-10 flex items-center justify-center gap-2 rounded-lg border py-3.5 sm:py-4 font-medium transition-colors ${
                   plan.highlighted
                     ? "border-transparent bg-[#ece9e2] text-black hover:bg-white"
                     : "border-white/15 text-white hover:bg-white/5"

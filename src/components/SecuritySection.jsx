@@ -2,9 +2,9 @@ import { motion } from "framer-motion";
 
 function SecuritySection() {
   return (
-    <section className="bg-black py-40 text-white">
+    <section className="bg-black py-20 sm:py-28 lg:py-40 text-white">
 
-      <div className="mx-auto max-w-[1700px] px-16">
+      <div className="mx-auto max-w-[1700px] px-6 sm:px-10 lg:px-16">
 
         {/* Top Label */}
 
@@ -13,12 +13,12 @@ function SecuritySection() {
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
           transition={{ duration: 0.6 }}
-          className="mb-14 flex items-center gap-5"
+          className="mb-8 sm:mb-10 lg:mb-14 flex items-center gap-3 sm:gap-4 lg:gap-5"
         >
 
-          <div className="h-px w-16 bg-white/20" />
+          <div className="h-px w-10 sm:w-12 lg:w-16 bg-white/20" />
 
-          <span className="font-mono text-[18px] tracking-[0.18em] text-[#7c736d]">
+          <span className="font-mono text-sm sm:text-base lg:text-[18px] tracking-[0.18em] text-[#7c736d]">
             Security
           </span>
 
@@ -31,14 +31,14 @@ function SecuritySection() {
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
           transition={{ duration: 0.8 }}
-          className="leading-[0.9]"
+          className="leading-[0.95] sm:leading-[0.92] lg:leading-[0.9]"
         >
 
-          <span className="block text-[115px] font-light text-white">
+          <span className="block text-[44px] sm:text-[68px] md:text-[88px] lg:text-[115px] font-light text-white">
             Autonomous,
           </span>
 
-          <span className="block text-[115px] font-light text-[#716b66]">
+          <span className="block text-[44px] sm:text-[68px] md:text-[88px] lg:text-[115px] font-light text-[#716b66]">
             not uncontrolled.
           </span>
 
@@ -51,7 +51,7 @@ function SecuritySection() {
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
           transition={{ delay: 0.2, duration: 0.8 }}
-          className="mt-20 max-w-[820px] text-[24px] leading-[1.7] text-[#7b746f]"
+          className="mt-10 sm:mt-14 lg:mt-20 max-w-[820px] text-base sm:text-lg lg:text-[24px] leading-[1.6] lg:leading-[1.7] text-[#7b746f]"
         >
           Your agents are powerful but constrained.
           Enterprise-grade security ensures they only

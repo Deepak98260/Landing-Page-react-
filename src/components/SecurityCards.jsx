@@ -40,16 +40,16 @@ function SecurityShowcase() {
   const [active, setActive] = useState(0);
 
   return (
-    <section className="bg-black py-24">
-      <div className="mx-auto max-w-[1700px] px-16">
-        <div className="grid grid-cols-1 gap-8 lg:grid-cols-[1.4fr_1fr]">
+    <section className="bg-black py-16 sm:py-20 lg:py-24">
+      <div className="mx-auto max-w-[1700px] px-6 sm:px-10 lg:px-16">
+        <div className="grid grid-cols-1 gap-6 sm:gap-7 lg:gap-8 lg:grid-cols-[1.4fr_1fr]">
           {/* LEFT PANEL */}
-          <div className="flex flex-col rounded-[28px] border border-white/10 bg-[#050505] p-14">
+          <div className="flex flex-col rounded-[20px] sm:rounded-[24px] lg:rounded-[28px] border border-white/10 bg-[#050505] p-6 sm:p-10 lg:p-14">
             <div>
               <p className="font-mono text-xs text-white/40">
                 Active protection
               </p>
-              <p className="mt-4 text-[56px] font-light leading-none text-white">
+              <p className="mt-4 text-[36px] sm:text-[46px] lg:text-[56px] font-light leading-none text-white">
                 0
               </p>
               <p className="mt-3 text-sm text-white/40">
@@ -58,7 +58,7 @@ function SecurityShowcase() {
             </div>
 
             {/* IMAGE - centered in remaining space, aligned with text column */}
-            <div className="flex flex-1 items-center justify-center py-8">
+            <div className="flex flex-1 items-center justify-center py-6 sm:py-8">
               <AnimatePresence mode="wait">
                 <motion.img
                   key={active}
@@ -68,7 +68,7 @@ function SecurityShowcase() {
                   animate={{ opacity: 1, scale: 1, filter: "blur(0px)" }}
                   exit={{ opacity: 0, scale: 1.1, filter: "blur(12px)" }}
                   transition={{ duration: 0.6, ease: [0.25, 0.1, 0.25, 1] }}
-                  className="max-h-[220px] max-w-[220px] object-contain"
+                  className="max-h-[160px] max-w-[160px] sm:max-h-[190px] sm:max-w-[190px] lg:max-h-[220px] lg:max-w-[220px] object-contain"
                   draggable={false}
                 />
               </AnimatePresence>
@@ -87,7 +87,7 @@ function SecurityShowcase() {
           </div>
 
           {/* RIGHT PANEL */}
-          <div className="flex flex-col gap-4">
+          <div className="flex flex-col gap-3 sm:gap-4">
             {items.map((item, index) => {
               const Icon = item.icon;
               const isActive = index === active;
@@ -105,7 +105,7 @@ function SecurityShowcase() {
                       : "rgba(255,255,255,0.1)",
                   }}
                   transition={{ duration: 0.3 }}
-                  className="flex flex-1 cursor-pointer items-start gap-4 rounded-2xl border p-6"
+                  className="flex flex-1 cursor-pointer items-start gap-3 sm:gap-4 rounded-2xl border p-4 sm:p-5 lg:p-6"
                 >
                   <motion.div
                     animate={{
@@ -117,7 +117,7 @@ function SecurityShowcase() {
                         : "rgba(255,255,255,0.2)",
                     }}
                     transition={{ duration: 0.3 }}
-                    className="flex h-11 w-11 flex-shrink-0 items-center justify-center rounded-xl border"
+                    className="flex h-10 w-10 sm:h-11 sm:w-11 flex-shrink-0 items-center justify-center rounded-xl border"
                   >
                     <Icon
                       size={18}

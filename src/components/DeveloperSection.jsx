@@ -21,7 +21,7 @@ const features = [
 
 function  DeveloperSection() {
   return (
-    <section className="relative overflow-hidden bg-black py-32">
+    <section className="relative overflow-hidden bg-black py-20 sm:py-24 lg:py-32">
       {/* BACKGROUND IMAGE - full bleed right side, fading into black */}
       <div
         className="pointer-events-none absolute inset-y-0 right-0 w-full lg:w-[60%]"
@@ -41,7 +41,7 @@ function  DeveloperSection() {
       </div>
 
       {/* CONTENT */}
-      <div className="relative mx-auto max-w-[1700px] px-16">
+      <div className="relative mx-auto max-w-[1700px] px-6 sm:px-10 lg:px-16">
         <div className="max-w-[900px]">
           {/* LABEL */}
           <div className="flex items-center gap-3">
@@ -52,20 +52,20 @@ function  DeveloperSection() {
           </div>
 
           {/* HEADING */}
-          <h2 className="mt-8 text-[64px] font-light leading-[0.95] tracking-tight text-white sm:text-[80px] lg:text-[96px]">
+          <h2 className="mt-6 sm:mt-7 lg:mt-8 text-[36px] font-light leading-[0.95] tracking-tight text-white sm:text-[52px] md:text-[64px] lg:text-[80px] xl:text-[96px]">
             Code your agents.
             <br />
             <span className="text-white/30">Or let them code.</span>
           </h2>
 
           {/* SUBTEXT */}
-          <p className="mt-10 max-w-[560px] text-lg leading-relaxed text-white/40">
+          <p className="mt-6 sm:mt-8 lg:mt-10 max-w-[560px] text-base sm:text-lg leading-relaxed text-white/40">
             A powerful SDK for building, deploying, and orchestrating AI
             agents. Define behaviors in code or natural language.
           </p>
 
           {/* FEATURE GRID */}
-          <div className="mt-16 grid grid-cols-1 gap-x-16 gap-y-10 sm:grid-cols-2">
+          <div className="mt-10 sm:mt-12 lg:mt-16 grid grid-cols-1 gap-x-10 sm:gap-x-16 gap-y-8 sm:gap-y-10 sm:grid-cols-2">
             {features.map((feature) => (
               <div key={feature.title}>
                 <h3 className="text-base font-semibold text-white">

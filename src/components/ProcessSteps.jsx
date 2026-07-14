@@ -25,7 +25,7 @@ function ProcessSteps() {
       ref={ref}
    className="relative -mt-10 bg-black pb-16"
     >
-     <div className="relative mx-auto flex max-w-[1700px] gap-8 px-16">
+     <div className="relative mx-auto flex flex-col lg:flex-row max-w-[1700px] gap-6 sm:gap-7 lg:gap-8 px-6 sm:px-10 lg:px-16">
 
   <ConnectionLines />
 
@@ -43,25 +43,25 @@ function ProcessSteps() {
     opacity: opacity1,
   }}
           whileHover={{ y: -8 }}
-          className="group relative flex-1 overflow-hidden rounded-3xl border border-white/10 bg-[#080808] p-10"
+          className="group relative flex-1 overflow-hidden rounded-3xl border border-white/10 bg-[#080808] p-6 sm:p-8 lg:p-10"
         >
-          <div className="mb-10 flex items-center justify-between">
+          <div className="mb-6 sm:mb-8 lg:mb-10 flex items-center justify-between">
 
             <span className="font-mono text-pink-400">
               01
             </span>
 
-            <div className="h-px w-44 bg-pink-500"></div>
+            <div className="h-px w-24 sm:w-32 lg:w-44 bg-pink-500"></div>
 
           </div>
 
-          <h3 className="text-5xl font-light text-white">
+          <h3 className="text-3xl sm:text-4xl lg:text-5xl font-light text-white">
             Define
             <br />
             your agent
           </h3>
 
-          <p className="mt-8 text-lg leading-8 text-gray-500">
+          <p className="mt-5 sm:mt-6 lg:mt-8 text-base sm:text-lg leading-7 sm:leading-8 text-gray-500">
             Configure the behaviour, tools,
             permissions and objectives of
             your autonomous worker.
@@ -77,25 +77,25 @@ function ProcessSteps() {
     scale: card2,
     opacity: opacity2,
   }}          whileHover={{ y: -8 }}
-          className="group relative flex-1 overflow-hidden rounded-3xl border border-white/10 bg-[#080808] p-10"
+          className="group relative flex-1 overflow-hidden rounded-3xl border border-white/10 bg-[#080808] p-6 sm:p-8 lg:p-10"
         >
-          <div className="mb-10 flex items-center justify-between">
+          <div className="mb-6 sm:mb-8 lg:mb-10 flex items-center justify-between">
 
             <span className="font-mono text-gray-600">
               02
             </span>
 
-            <div className="h-px w-44 bg-white/10"></div>
+            <div className="h-px w-24 sm:w-32 lg:w-44 bg-white/10"></div>
 
           </div>
 
-          <h3 className="text-5xl font-light text-gray-500">
+          <h3 className="text-3xl sm:text-4xl lg:text-5xl font-light text-gray-500">
             Deploy
             <br />
             instantly
           </h3>
 
-          <p className="mt-8 text-lg leading-8 text-gray-600">
+          <p className="mt-5 sm:mt-6 lg:mt-8 text-base sm:text-lg leading-7 sm:leading-8 text-gray-600">
             Launch agents across your
             distributed infrastructure with
             one click.
@@ -110,25 +110,25 @@ function ProcessSteps() {
     opacity: opacity3,
   }}
           whileHover={{ y: -8 }}
-          className="group relative flex-1 overflow-hidden rounded-3xl border border-white/10 bg-[#080808] p-10"
+          className="group relative flex-1 overflow-hidden rounded-3xl border border-white/10 bg-[#080808] p-6 sm:p-8 lg:p-10"
         >
-          <div className="mb-10 flex items-center justify-between">
+          <div className="mb-6 sm:mb-8 lg:mb-10 flex items-center justify-between">
 
             <span className="font-mono text-gray-600">
               03
             </span>
 
-            <div className="h-px w-44 bg-white/10"></div>
+            <div className="h-px w-24 sm:w-32 lg:w-44 bg-white/10"></div>
 
           </div>
 
-          <h3 className="text-5xl font-light text-gray-500">
+          <h3 className="text-3xl sm:text-4xl lg:text-5xl font-light text-gray-500">
             Scale
             <br />
             automatically
           </h3>
 
-          <p className="mt-8 text-lg leading-8 text-gray-600">
+          <p className="mt-5 sm:mt-6 lg:mt-8 text-base sm:text-lg leading-7 sm:leading-8 text-gray-600">
             Monitor performance and scale
             agents automatically based on
             workload.

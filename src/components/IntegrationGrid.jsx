@@ -19,10 +19,10 @@ const integrations = [
 
 function IntegrationGrid() {
   return (
-    <section className="relative bg-black py-24 text-white">
-      <div className="mx-auto max-w-[1700px] px-16">
+    <section className="relative bg-black py-16 sm:py-20 lg:py-24 text-white">
+      <div className="mx-auto max-w-[1700px] px-6 sm:px-10 lg:px-16">
 
-        <div className="grid grid-cols-4 gap-5">
+        <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4 sm:gap-5">
 
           {integrations.map((item, index) => (
                         <motion.div
@@ -40,14 +40,20 @@ function IntegrationGrid() {
               className="
                 group
                 relative
-                h-[165px]
+                h-[135px]
+                sm:h-[150px]
+                lg:h-[165px]
                 overflow-hidden
                 rounded-2xl
                 border
                 border-white/10
                 bg-[#050505]
-                px-7
-                py-6
+                px-4
+                sm:px-5
+                lg:px-7
+                py-4
+                sm:py-5
+                lg:py-6
                 transition-all
                 duration-500
                 hover:border-white/20
@@ -75,15 +81,22 @@ function IntegrationGrid() {
               <div
                 className="
                   absolute
-                  right-5
-                  top-5
+                  right-3
+                  sm:right-4
+                  lg:right-5
+                  top-3
+                  sm:top-4
+                  lg:top-5
                   rounded-full
                   border
                   border-white/10
                   bg-white/5
-                  px-3
+                  px-2
+                  sm:px-2.5
+                  lg:px-3
                   py-1
-                  text-[9px]
+                  text-[8px]
+                  sm:text-[9px]
                   uppercase
                   tracking-[0.18em]
                   font-mono
@@ -98,8 +111,12 @@ function IntegrationGrid() {
               <div
                 className="
                   flex
-                  h-10
-                  w-10
+                  h-8
+                  w-8
+                  sm:h-9
+                  sm:w-9
+                  lg:h-10
+                  lg:w-10
                   items-center
                   justify-center
                   rounded-xl
@@ -116,11 +133,13 @@ function IntegrationGrid() {
 
               {/* Name */}
 
-              <div className="absolute left-7 bottom-6">
+              <div className="absolute left-4 sm:left-5 lg:left-7 bottom-4 sm:bottom-5 lg:bottom-6">
 
                 <h3
                   className="
-                    text-[18px]
+                    text-[15px]
+                    sm:text-[16px]
+                    lg:text-[18px]
                     font-light
                     tracking-tight
                     text-white
@@ -154,31 +173,31 @@ function IntegrationGrid() {
 
 {/* Bottom Stats */}
 
-<div className="mt-20 border-t border-white/10 pt-12">
+<div className="mt-12 sm:mt-16 lg:mt-20 border-t border-white/10 pt-8 sm:pt-10 lg:pt-12">
 
-  <div className="flex items-center justify-between">
+  <div className="flex flex-col lg:flex-row lg:items-center gap-8 lg:gap-0 lg:justify-between">
 
-    <div className="flex items-center gap-20">
+    <div className="flex flex-wrap items-end gap-8 sm:gap-12 lg:gap-20">
 
       <div className="flex items-end gap-3">
-        <h2 className="text-[48px] font-light text-white">100+</h2>
-        <p className="mb-2 text-[18px] text-[#7b746f]">
+        <h2 className="text-[32px] sm:text-[40px] lg:text-[48px] font-light text-white">100+</h2>
+        <p className="mb-2 text-sm sm:text-base lg:text-[18px] text-[#7b746f]">
           Integrations
         </p>
       </div>
 
       <div className="flex items-end gap-3">
-        <h2 className="text-[48px] font-light text-white">OAuth</h2>
-        <p className="mb-2 text-[18px] text-[#7b746f]">
+        <h2 className="text-[32px] sm:text-[40px] lg:text-[48px] font-light text-white">OAuth</h2>
+        <p className="mb-2 text-sm sm:text-base lg:text-[18px] text-[#7b746f]">
           Auth built-in
         </p>
       </div>
 
       <div className="flex items-end gap-3">
-        <h2 className="text-[48px] font-light text-white">
+        <h2 className="text-[32px] sm:text-[40px] lg:text-[48px] font-light text-white">
           Webhooks
         </h2>
-        <p className="mb-2 text-[18px] text-[#7b746f]">
+        <p className="mb-2 text-sm sm:text-base lg:text-[18px] text-[#7b746f]">
           Real-time sync
         </p>
       </div>
@@ -187,8 +206,12 @@ function IntegrationGrid() {
 
     <button
       className="
+      self-start
+      lg:self-auto
       font-mono
-      text-[18px]
+      text-sm
+      sm:text-base
+      lg:text-[18px]
       tracking-[0.15em]
       text-[#7b746f]
       transition

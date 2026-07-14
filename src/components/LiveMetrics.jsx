@@ -27,7 +27,7 @@ function LiveMetrics() {
   }, []);
 
   return (
-    <section className="relative overflow-hidden bg-black py-36 text-white">
+    <section className="relative overflow-hidden bg-black py-20 sm:py-28 lg:py-36 text-white">
       {/* Background Grid */}
 
       <div
@@ -39,7 +39,7 @@ function LiveMetrics() {
         }}
       />
 
-      <div className="relative mx-auto max-w-[1700px] px-16">
+      <div className="relative mx-auto max-w-[1700px] px-6 sm:px-10 lg:px-16">
         {/* Live */}
 
         <motion.div
@@ -47,7 +47,7 @@ function LiveMetrics() {
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
           transition={{ duration: 0.8 }}
-          className="mb-12 flex items-center gap-5"
+          className="mb-8 sm:mb-10 lg:mb-12 flex flex-wrap items-center gap-4 sm:gap-5"
         >
           <div className="flex items-center gap-3 bg-[#1b1018] px-4 py-2 rounded-full">
             <motion.div
@@ -62,12 +62,12 @@ function LiveMetrics() {
               }}
             />
 
-            <span className="font-mono text-sm uppercase tracking-[0.25em] text-pink-300">
+            <span className="font-mono text-xs sm:text-sm uppercase tracking-[0.2em] sm:tracking-[0.25em] text-pink-300">
               LIVE
             </span>
           </div>
 
-          <span className="font-mono text-xl text-gray-500">
+          <span className="font-mono text-base sm:text-lg lg:text-xl text-gray-500">
             {time} IST
           </span>
         </motion.div>
@@ -81,15 +81,15 @@ function LiveMetrics() {
           transition={{ duration: 1 }}
           className="leading-[0.88]"
         >
-          <span className="block text-[110px] xl:text-[125px] font-light text-white leading-none">
+          <span className="block text-[52px] sm:text-[76px] md:text-[96px] lg:text-[110px] xl:text-[125px] font-light text-white leading-none">
             Real-time
           </span>
 
-          <span className="block text-[110px] xl:text-[125px] font-light text-[#67615d] leading-none">
+          <span className="block text-[52px] sm:text-[76px] md:text-[96px] lg:text-[110px] xl:text-[125px] font-light text-[#67615d] leading-none">
             agent
           </span>
 
-          <span className="block text-[120px] xl:text-[135px] font-light text-[#67615d] leading-none">
+          <span className="block text-[58px] sm:text-[84px] md:text-[104px] lg:text-[120px] xl:text-[135px] font-light text-[#67615d] leading-none">
             metrics.
           </span>
         </motion.h2>

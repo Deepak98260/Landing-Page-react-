@@ -4,7 +4,7 @@ import AnimatedCounter from "./AnimatedCounter";
 
 function MetricsDashboard() {
   return (
-    <section className="relative bg-black py-24">
+    <section className="relative bg-black py-16 sm:py-20 lg:py-24">
 
       {/* Background Dots */}
 
@@ -17,7 +17,7 @@ function MetricsDashboard() {
         }}
       />
 
-      <div className="relative mx-auto max-w-[1700px] px-16">
+      <div className="relative mx-auto max-w-[1700px] px-6 sm:px-10 lg:px-16">
 
         {/* ================= GRAPH ================= */}
 
@@ -34,7 +34,7 @@ function MetricsDashboard() {
           transition={{
             duration: 0.8,
           }}
-          className="overflow-hidden rounded-[24px] border border-white/10"
+          className="overflow-hidden rounded-[16px] sm:rounded-[20px] lg:rounded-[24px] border border-white/10"
         >
           <img
             src={graphImage}
@@ -46,7 +46,7 @@ function MetricsDashboard() {
 
         {/* ================= METRIC CARDS ================= */}
 
-        <div className="mt-8 grid grid-cols-3 gap-8">
+        <div className="mt-6 sm:mt-7 lg:mt-8 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 sm:gap-7 lg:gap-8">
 
           {/* Card 1 */}
 
@@ -63,16 +63,16 @@ function MetricsDashboard() {
             transition={{
               duration: 0.6,
             }}
-            className="border border-white/10 bg-[#060606] p-7"
+            className="border border-white/10 bg-[#060606] p-5 sm:p-6 lg:p-7"
           >
-            <p className="font-mono text-sm tracking-[0.25em] uppercase text-gray-500">
+            <p className="font-mono text-xs sm:text-sm tracking-[0.2em] sm:tracking-[0.25em] uppercase text-gray-500">
               Tasks completed
             </p>
 
             {/* Animated Wave */}
 
 <svg
-  className="mt-10 w-full"
+  className="mt-6 sm:mt-8 lg:mt-10 w-full"
   viewBox="0 0 420 70"
   fill="none"
 >
@@ -99,7 +99,7 @@ function MetricsDashboard() {
   />
 </svg>
 
-            <h2 className="mt-6 text-[42px] font-light text-white">
+            <h2 className="mt-4 sm:mt-5 lg:mt-6 text-[30px] sm:text-[36px] lg:text-[42px] font-light text-white">
              <AnimatedCounter
   from={0}
   to={12847392}
@@ -107,11 +107,11 @@ function MetricsDashboard() {
 />
             </h2>
 
-            <p className="mt-8 text-3xl text-white">
+            <p className="mt-6 sm:mt-7 lg:mt-8 text-xl sm:text-2xl lg:text-3xl text-white">
               Tasks completed today
             </p>
 
-            <p className="mt-5 font-mono text-xl text-gray-500">
+            <p className="mt-4 sm:mt-5 font-mono text-base sm:text-lg lg:text-xl text-gray-500">
               by 23,847 active agents
             </p>
           </motion.div>
@@ -132,18 +132,18 @@ function MetricsDashboard() {
               delay: .15,
               duration: .6,
             }}
-            className="border border-white/10 bg-[#060606] p-10"
+            className="border border-white/10 bg-[#060606] p-6 sm:p-8 lg:p-10"
           >
-            <p className="font-mono text-sm tracking-[0.25em] uppercase text-gray-500">
+            <p className="font-mono text-xs sm:text-sm tracking-[0.2em] sm:tracking-[0.25em] uppercase text-gray-500">
               Across all regions
             </p>
 
-            <h3 className="mt-8 text-3xl text-white">
+            <h3 className="mt-6 sm:mt-7 lg:mt-8 text-xl sm:text-2xl lg:text-3xl text-white">
               Availability
             </h3>
 
             <svg
-  className="mt-8 w-full"
+  className="mt-6 sm:mt-7 lg:mt-8 w-full"
   viewBox="0 0 420 60"
   fill="none"
 >
@@ -166,7 +166,7 @@ function MetricsDashboard() {
   />
 </svg>
 
-            <h2 className="mt-32 text-[42px] font-light text-white">
+            <h2 className="mt-16 sm:mt-24 lg:mt-32 text-[30px] sm:text-[36px] lg:text-[42px] font-light text-white">
             <AnimatedCounter
   from={0}
   to={99.99}
@@ -193,18 +193,18 @@ function MetricsDashboard() {
               delay: .3,
               duration: .6,
             }}
-            className="border border-white/10 bg-[#060606] p-10"
+            className="border border-white/10 bg-[#060606] p-6 sm:p-8 lg:p-10"
           >
-            <p className="font-mono text-sm tracking-[0.25em] uppercase text-gray-500">
+            <p className="font-mono text-xs sm:text-sm tracking-[0.2em] sm:tracking-[0.25em] uppercase text-gray-500">
               P99 Latency
             </p>
 
-            <h3 className="mt-8 text-3xl text-white">
+            <h3 className="mt-6 sm:mt-7 lg:mt-8 text-xl sm:text-2xl lg:text-3xl text-white">
               Average execution
             </h3>
 
             <svg
-  className="mt-8 w-full"
+  className="mt-6 sm:mt-7 lg:mt-8 w-full"
   viewBox="0 0 420 60"
   fill="none"
 >
@@ -226,7 +226,7 @@ function MetricsDashboard() {
   />
 </svg>
 
-            <h2 className="mt-32 text-[42px] font-light text-white">
+            <h2 className="mt-16 sm:mt-24 lg:mt-32 text-[30px] sm:text-[36px] lg:text-[42px] font-light text-white">
              <>
   &lt;
   <AnimatedCounter

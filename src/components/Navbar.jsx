@@ -25,7 +25,18 @@ function Navbar() {
     stiffness: 120,
     damping: 18,
   }}
-  className="fixed top-0 left-0 z-50 flex w-full justify-center pt-5"
+ className="
+fixed
+top-0
+left-0
+z-50
+flex
+w-full
+justify-center
+pt-3
+sm:pt-4
+lg:pt-5
+"
 >
      <motion.div
   animate={{
@@ -43,15 +54,15 @@ function Navbar() {
 className={`flex items-center justify-between transition-all duration-500 ease-in-out
 ${
   scrolled
-    ? "h-14 w-[78%] max-w-[1250px] rounded-full border border-white/10 bg-black/60 px-8 shadow-[0_20px_60px_rgba(0,0,0,0.5)] backdrop-blur-2xl"
-    : "h-24 w-full max-w-[1720px] px-12"
+    ? "h-12 sm:h-13 md:h-14 w-[92%] sm:w-[88%] md:w-[82%] lg:w-[78%] max-w-[1250px] rounded-full border border-white/10 bg-black/60 px-4 sm:px-6 md:px-8 shadow-[0_20px_60px_rgba(0,0,0,0.5)] backdrop-blur-2xl"
+    : "h-16 sm:h-20 md:h-24 w-full max-w-[1720px] px-4 sm:px-6 md:px-8 lg:px-12"
 }`}
 >
         {/* Logo */}
         <div className="flex items-start gap-1">
           <h1
             className={`font-light tracking-tight text-white transition-all duration-500 ${
-              scrolled ? "text-[20px]" : "text-[24px]"
+              scrolled ? "text-[16px] sm:text-[18px] md:text-[20px]" : "text-[18px] sm:text-[20px] md:text-[24px]"
             }`}
           >
             COMPUTE
@@ -59,7 +70,7 @@ ${
 
           <span
             className={`text-gray-400 transition-all duration-500 ${
-              scrolled ? "mt-0 text-[10px]" : "mt-1 text-[12px]"
+              scrolled ? "mt-0 text-[9px] sm:text-[10px]" : "mt-1 text-[10px] sm:text-[12px]"
             }`}
           >
             ™
@@ -67,7 +78,7 @@ ${
         </div>
 
         {/* Desktop Menu */}
-        <nav className="hidden lg:flex items-center gap-16 text-[18px] font-light text-gray-300">
+        <nav className="hidden lg:flex items-center gap-8 xl:gap-16 text-[16px] xl:text-[18px] font-light text-gray-300">
           <a href="#" className="transition hover:text-white">
             Capabilities
           </a>
@@ -89,16 +100,16 @@ ${
           </a>
         </nav>
                 {/* Right Side */}
-        <div className="hidden lg:flex items-center gap-8">
-          <button className="text-[18px] text-white transition hover:text-gray-300">
+        <div className="hidden lg:flex items-center gap-4 xl:gap-8">
+          <button className="text-[16px] xl:text-[18px] text-white transition hover:text-gray-300">
             Sign in
           </button>
 
           <button
-            className={`rounded-full bg-white font-medium text-black transition-all duration-500 hover:scale-105 ${
+            className={`rounded-full bg-white font-medium text-black transition-all duration-500 hover:scale-105 whitespace-nowrap ${
               scrolled
-                ? "px-6 py-2 text-[15px]"
-                : "px-8 py-3 text-[18px]"
+                ? "px-4 xl:px-6 py-2 text-[13px] xl:text-[15px]"
+                : "px-5 xl:px-8 py-2.5 xl:py-3 text-[14px] xl:text-[18px]"
             }`}
           >
             Deploy agent
@@ -106,10 +117,10 @@ ${
         </div>
 
         {/* Mobile Menu */}
-        <button className="text-white lg:hidden">
+        <button className="text-white lg:hidden shrink-0">
           <HiOutlineMenuAlt3
-            size={scrolled ? 28 : 34}
-            className="transition-all duration-500"
+            size={scrolled ? 24 : 28}
+            className="transition-all duration-500 sm:w-[30px] sm:h-[30px] md:w-[34px] md:h-[34px]"
           />
         </button>
     </motion.div>

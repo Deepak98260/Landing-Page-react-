@@ -21,7 +21,7 @@ function Footer() {
     <footer className="relative overflow-hidden bg-black">
       {/* TOP IMAGE - fades into black */}
       <div
-        className="relative h-[300px] w-full"
+        className="relative h-[160px] sm:h-[220px] lg:h-[300px] w-full"
         style={{
           maskImage:
             "linear-gradient(to bottom, black 40%, transparent 100%)",
@@ -38,14 +38,15 @@ function Footer() {
       </div>
 
       {/* MAIN FOOTER CONTENT */}
-      <div className="mx-auto max-w-[1700px] px-16 pb-16">
-        <div className="grid grid-cols-1 gap-16 lg:grid-cols-[1.3fr_1fr_1fr_1fr_1fr]">
+      <div className="mx-auto max-w-[1700px] px-6 sm:px-10 lg:px-16 pb-10 sm:pb-12 lg:pb-16">
+        <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-10 sm:gap-12 lg:gap-16 lg:grid-cols-[1.3fr_1fr_1fr_1fr_1fr]">
           {/* BRAND */}
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             transition={{ duration: 0.6 }}
+            className="sm:col-span-2 md:col-span-3 lg:col-span-1"
           >
             <div className="flex items-baseline gap-2">
               <span className="text-2xl font-semibold text-white">
@@ -108,7 +109,7 @@ function Footer() {
         </div>
 
         {/* BOTTOM BAR */}
-        <div className="mt-20 flex flex-col items-center justify-between gap-4 border-t border-white/10 pt-8 sm:flex-row">
+        <div className="mt-12 sm:mt-16 lg:mt-20 flex flex-col items-center justify-between gap-4 border-t border-white/10 pt-8 sm:flex-row">
           <p className="text-sm text-white/30">
             © 2026 COMPUTE. All rights reserved.
           </p>
